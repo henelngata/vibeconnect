@@ -3,22 +3,32 @@ import { Menu } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 
+ 
+ export function Logo() {
+   return (
+     <Link href="/" className="text-white text-2xl">
+       Vibe<span className="text-[#FE8002]">Connect</span>
+     </Link>
+   );
+ }
+ 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="bg-black text-white">
       <section className="flex items-center justify-between p-2">
-        <Link href="/">
-          Vibe<span className="text-[#FE8002]">Connect</span>
-        </Link>
-        <button onClick={() => setIsOpen(!isOpen)}>
-          <Menu size={26} />
+        <Logo />
+        <button
+          className="px-2.5 py-1 border-1 border-[#ffffff80] rounded-md lg:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <Menu size={30} />
         </button>
       </section>
 
       {isOpen ? (
         <>
-          <nav className="mb-4">
+          <nav className="mb-4 b">
             <ul>
               <li>
                 <Link href="/">About Us</Link>
@@ -56,7 +66,13 @@ function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <section>
+      <button
+        className="px-2.5 py-1 border-1 border-[#ffffff80] rounded-md lg:hidden"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <Menu size={30} />
+      </button>
       {isOpen ? (
         <button onClick={() => setIsOpen(false)}></button>
       ) : (
@@ -65,7 +81,7 @@ function MobileNav() {
       <button onClick={() => setIsOpen(!isOpen)}>
         <Menu size={26} />
       </button>
-    </>
+    </section>
   );
 }
 
