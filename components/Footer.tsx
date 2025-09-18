@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, InstagramIcon, Twitter, YoutubeIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Logo } from "./Header";
@@ -13,9 +13,20 @@ function Footer() {
         events.
       </p>
 
-      <section>
+      <section className="flex gap-4 my-4">
         {" "}
-        <Facebook fill="white" />
+        <Link href={""}>
+          <Facebook fill="white" />
+        </Link>
+        <Link href={""}>
+          <Twitter fill="white" />
+        </Link>
+        <Link href={""}>
+          <InstagramIcon stroke="white" />
+        </Link>
+        <Link href={""}>
+          <YoutubeIcon fill="white" stroke="black" />
+        </Link>
       </section>
       <section className="grid grid-cols-2 gap-4 mb-6">
         <section>

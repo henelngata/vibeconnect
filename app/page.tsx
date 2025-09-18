@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <section className="bg-[url('/img/vibe-hero.svg')]  bg-cover bg-center text-white py-20 px-4">
+      <section className="bg-gradient-to-br from-[#fe8002] to-[#b91d1d] text-white py-20 px-4">
         <h1 className="text-4xl font-bold mb-4">
           Connect with Artistry, Artists & Venues
         </h1>
@@ -17,18 +17,18 @@ export default function Home() {
         </p>
         <section className="flex gap-4">
           <Link
-            className="flex justify-between items-center bg-black p-2 rounded-md gap-2 text-sm"
+            className="flex justify-between items-center bg-black p-2 rounded-md gap-2"
             href={""}
           >
             {" "}
             <Calendar size={24} /> Browse Events
           </Link>
           <Link
-            className="flex justify-between items-center gap-4 border-1 border-white p-2 rounded-md text-sm"
+            className="flex justify-between items-center gap-4 border-1 border-white p-2 rounded-md"
             href={""}
           >
             {" "}
-            <UserPlus size={24} /> Browse Events
+            <UserPlus size={24} /> Join Us
           </Link>
         </section>
       </section>

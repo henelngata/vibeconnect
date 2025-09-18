@@ -15,11 +15,11 @@ import React, { useState } from "react";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="bg-black text-white">
-      <section className="flex items-center justify-between p-2">
+    <header className="bg-black text-white sticky">
+      <section className="flex items-center justify-between p-2 ">
         <Logo />
         <button
-          className="px-2.5 py-1 border-1 border-[#ffffff80] rounded-md lg:hidden"
+          className="px-1.5 py-1 border-1 border-[#ffffff80] rounded-md lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Menu size={30} />
@@ -28,19 +28,19 @@ function Header() {
 
       {isOpen ? (
         <>
-          <nav className="mb-4 b">
+          <nav className="mb-4 ">
             <ul>
               <li>
-                <Link href="/">About Us</Link>
+                <Link href="/about">About Us</Link>
               </li>
               <li>
-                <Link href="/">Events</Link>
+                <Link href="/discover">Events</Link>
               </li>
               <li>
-                <Link href="/">Music</Link>
+                <Link href="/discover">Music</Link>
               </li>
               <li>
-                <Link href="/">Artworks</Link>
+                <Link href="/discover">Artworks</Link>
               </li>
             </ul>
           </nav>
